@@ -1,0 +1,248 @@
+@font-face {
+    font-family: "MonlyLite-Light";
+    src: url("../fonts/Monly-Light.woff") format("woff"),
+    url("../fonts/Monly-Light.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "MonlyLite-Bold";
+    src: url("../fonts/Monly-Bold.woff") format("woff"),
+    url("../fonts/Monly-Bold.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OwnHand';
+    src: url('../fonts/OwnHand.woff2') format('woff2'),
+    url('../fonts/OwnHand.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mountains of Christmas';
+    src: url('../fonts/MountainsofChristmas-Regular.woff2') format('woff2'),
+    url('../fonts/MountainsofChristmas-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url("../img/background.png") no-repeat center center;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+p {
+    margin: 15px 0;
+}
+
+a {
+    font-family: "MonlyLite-Bold", Arial, sans-serif;
+    display: block;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.header {
+    width: 100%;
+    padding: 15px 10px 55px;
+}
+
+.header__logo {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.intro {
+    width: 100%;
+    padding: 0 10px 15px;
+}
+
+.intro__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.intro__title {
+    position: relative;
+    font-family: 'Mountains of Christmas', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 1;
+    padding: 40px 0;
+    margin: 0 0 40px;
+}
+
+.intro__title::before,
+.intro__title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 220px;
+    height: 25px;
+    background: url("../img/line.png") no-repeat center center;
+    background-size: contain;
+}
+
+.intro__title::before {
+    top: 0;
+    -webkit-transform: rotate(180deg) translateX(50%);
+        -ms-transform: rotate(180deg) translateX(50%);
+            transform: rotate(180deg) translateX(50%);
+}
+
+.intro__title::after {
+    bottom: 0;
+}
+
+.intro__text {
+    font-size: 20px;
+}
+
+.intro__link {
+    margin-top: 15px;
+    font-size: 50px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.intro__link--tel {
+    position: relative;
+}
+
+.intro__link--tel::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    width: 100%;
+    height: 5px;
+    background: url("../img/line-dashed.png") no-repeat center center;
+    background-size: contain;
+}
+
+.intro__link--tel:hover:before {
+    display: none;
+}
+
+.intro__link--tel::after {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 105%;
+    width: 260px;
+    height: 90px;
+    background: url("../img/help.png") no-repeat center center;
+    background-size: contain;
+}
+
+.intro__social {
+    padding: 30px 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0;
+    line-height: 0;
+}
+
+.intro__social-link {
+    margin-right: 20px;
+}
+
+.intro__social-link:last-child {
+    margin-right: 0;
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding-top: 5vh;
+    }
+
+    .header__logo {
+        width: 420px;
+        -webkit-transform: translateX(-100px);
+            -ms-transform: translateX(-100px);
+                transform: translateX(-100px);
+    }
+
+    .intro {
+        padding-bottom: 5vh;
+    }
+
+    .intro__title {
+        padding: 80px 0;
+        font-size: 77px;
+    }
+
+    .intro__title::before,
+    .intro__title::after {
+        width: 420px;
+        height: 55px;
+    }
+
+    .intro__text {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .intro__link--tel::after {
+        display: block;
+    }
+}
